@@ -5,36 +5,23 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     curb (0.9.3)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    dotenv (2.2.1)
     equalizer (0.0.11)
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
-    google_maps_service (0.4.2)
-      hurley (~> 0.1)
-      multi_json (~> 1.11)
-      retriable (~> 2.0)
-    hurley (0.2)
     ice_nine (0.11.2)
     json (2.1.0)
-    method_source (0.8.2)
     mini_portile2 (2.2.0)
-    multi_json (1.12.1)
     multipart-post (2.0.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     openweather2 (0.1.8)
       json
-    pry (0.10.4)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-    retriable (2.1.0)
-    slop (3.6.0)
     telegram-bot-ruby (0.8.1)
       faraday
       virtus
@@ -49,11 +36,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  curb (~> 0.9.3)
-  google_maps_service
+  curb
+  dotenv
   nokogiri
   openweather2
-  pry
   telegram-bot-ruby
 
 BUNDLED WITH
