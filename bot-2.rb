@@ -6,8 +6,8 @@ require 'curb'
 require 'dotenv'
 
 Dotenv.load('.env')
-TGTOKEN = ENV['TGTOKEN']
-WEATHERTOKEN = ENV['WEATHERTOKEN']
+TG_TOKEN = ENV['TG_TOKEN']
+WEATHER_TOKEN = ENV['WEATHER_TOKEN']
 
 CITY = "Minsk"
 WEATHER_SITE = 'http://api.openweathermap.org/data/2.5/weather'
@@ -16,7 +16,7 @@ AFISHA_FILMS_NAME = 'ul.online_list > li > a:nth-child(2) > span:nth-child(1)'
 
 Openweather2.configure do |config|
   config.endpoint = WEATHER_SITE 
-  config.apikey = WEATHERTOKEN
+  config.apikey = WEATHER_TOKEN
 end
 
 http = Curl.get(AFISHA_URL)
@@ -26,7 +26,7 @@ array_of_name = Array.new(0)
   array_of_name << name.text
 end
 
-Telegram::Bot::Client.run(TGTOKEN) do |bot|
+Telegram::Bot::Client.run(TG_TOKEN) do |bot|
   bot.listen do |message|		
     case message.text
     when '/start'
